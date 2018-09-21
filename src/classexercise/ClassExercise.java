@@ -16,27 +16,31 @@ public class ClassExercise {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        int[] pNums = {1, 7, 5, -9, 5};
-//        int[] pDens = {3, -5, 6, -12, 8};
-//        int[] qNums = {4, -9, -25, -3, 13};
-//        int[] qDens = {5, -7, -30, 4, 20};
+//        int[][] p = {{1, 3}, {7, -5}, {5, 6}, {-9, -12}, {5, 8}};
+//        int[][] q = {{4, 5}, {-9, -7}, {-25, -30}, {-3, 4}, {13, 20}};
 //        
-//        for (int i=0; i<pNums.length; i++) {
-//            Fraction p = new Fraction(pNums[i], pDens[i]);
-//            Fraction q = new Fraction(qNums[i], qDens[i]);
-//            Fraction r = p.larger(q);
+//        for (int i=0; i<p.length; i++) {
+//            Fraction pFrac = new Fraction(p[i][0], p[i][1]);
+//            Fraction qFrac = new Fraction(q[i][0], q[i][1]);
+//            Fraction r = pFrac.larger(qFrac);
 //
 //            System.out.println(r.num + " / " + r.den);
 //        }
         
-        Fraction a = new Fraction(12, 4);
-        Fraction b = new Fraction(3, 4);
-        Fraction c = a.timesEquals(b);
+//        Fraction a = new Fraction(12, 4);
+//        Fraction b = new Fraction(3, 4);
+//        Fraction c = a.timesEquals(b);
+//        System.out.println(c.num + " / " + c.den);
+//        System.out.println(a.num + " / " + a.den);
+//        a = a.reduce();
+//        System.out.println(a.num + " / " + a.den);
+        Fraction c = new Fraction(24, 16);
+        c = c.reduce();
         System.out.println(c.num + " / " + c.den);
-        System.out.println(a.num + " / " + a.den);
-        a = a.reduce();
-        System.out.println(a.num + " / " + a.den);
         
+//        double a = 8.349;
+//        Fraction test = new Fraction(a);
+//        System.out.println(test.num + " / " + test.den);
     }
     
 }
