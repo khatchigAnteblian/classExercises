@@ -32,7 +32,27 @@ public class Fraction {
         return (decimalPlaces(num % 10));
     }
     
-<<<<<<< HEAD
+    private List commonFactors() {
+        int max = this.num < this.den ? this.den : this.num;
+        int maxRoot = (int) Math.sqrt(this.num);
+        List<Integer> factors = new ArrayList<>();
+        
+        for (int i=maxRoot + 1; i>1; i--) {
+            if (this.num % i == 0 && this.den % i == 0) {
+                factors.add(i);
+                if (Math.sqrt(this.num) != i) {
+                    factors.add(this.num / i);
+                }
+                if (Math.sqrt(this.den) != i) {
+                    factors.add(this.den / i);
+                }
+            }
+        }
+        Collections.sort(factors);
+        
+        return factors;
+    }
+
     private List commonFactors() {
         int max = this.num < this.den ? this.den : this.num;
         int maxRoot = (int) Math.sqrt(this.num);
@@ -54,8 +74,6 @@ public class Fraction {
         return factors;
     }
     
-=======
->>>>>>> 3b510d8dbc59c2379d8897fe79d035d1ef51b30f
     public double size() {
         return (double)this.num / (double)this.den;
     }
@@ -79,27 +97,6 @@ public class Fraction {
         int newNum = (this.num * other.den) + (other.num * this.den);
         
         return new Fraction(newNum, commonDen);
-    }
-    
-    private List commonFactors() {
-        int max = this.num < this.den ? this.den : this.num;
-        int maxRoot = (int) Math.sqrt(this.num);
-        List<Integer> factors = new ArrayList<>();
-        
-        for (int i=maxRoot + 1; i>1; i--) {
-            if (this.num % i == 0 && this.den % i == 0) {
-                factors.add(i);
-                if (Math.sqrt(this.num) != i) {
-                    factors.add(this.num / i);
-                }
-                if (Math.sqrt(this.den) != i) {
-                    factors.add(this.den / i);
-                }
-            }
-        }
-        Collections.sort(factors);
-        
-        return factors;
     }
     
     public Fraction reduce() {
