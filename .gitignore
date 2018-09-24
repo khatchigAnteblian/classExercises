@@ -1,3 +1,4 @@
+*.doc
 *.xml
 *.mf
 build/
