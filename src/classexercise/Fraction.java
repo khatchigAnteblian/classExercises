@@ -52,27 +52,6 @@ public class Fraction {
         
         return factors;
     }
-
-    private List commonFactors() {
-        int max = this.num < this.den ? this.den : this.num;
-        int maxRoot = (int) Math.sqrt(this.num);
-        List<Integer> factors = new ArrayList<>();
-        
-        for (int i=maxRoot + 1; i>1; i--) {
-            if (this.num % i == 0 && this.den % i == 0) {
-                factors.add(i);
-                if (Math.sqrt(this.num) != i) {
-                    factors.add(this.num / i);
-                }
-                if (Math.sqrt(this.den) != i) {
-                    factors.add(this.den / i);
-                }
-            }
-        }
-        Collections.sort(factors);
-        
-        return factors;
-    }
     
     public double size() {
         return (double)this.num / (double)this.den;

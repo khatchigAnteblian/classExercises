@@ -47,9 +47,9 @@ public class ClassExercise {
         Fraction z = new Fraction(2,3);
         Fraction j = y.plus(z);
         System.out.println(j.num + " / " + j.den);
-        Fraction c = new Fraction(24, 16);
-        c = c.reduce();
-        System.out.println(c.num + " / " + c.den);
+        Fraction d = new Fraction(24, 16);
+        d = d.reduce();
+        System.out.println(d.num + " / " + d.den);
     }
     
 }
