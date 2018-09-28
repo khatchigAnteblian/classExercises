@@ -1,3 +1,25 @@
+// More classes and objects
+// Question 1:
+//    A class method is a method that belongs to the class itself and we call it
+//    from the class and not from any instance of the class.
+//    An instance method is a method that belongs to each instance of the class
+//    and can be called on the objects themselves.
+//
+// Question 2:
+//    a) We refer to a class method by calling it using the class name: ClassName.method();
+//    b) We refer to an instance method by calling it on the object: ObjectName.method();
+//
+// Question 4:
+//    We declare a class field by using the keyword "static" and that field becomes
+//    a part of the class itself and not just objects of the class.
+//    We declare an instance field without the "static" keyword and they are only
+//    used on instances of the class.
+//
+// Question 5:
+//    We refer to a class field using the class name: ClassName.field;
+//    We refer to an instance field using an instance of the class: ObjectName.field;
+
+
 package classexercise;
 
 /**
@@ -50,6 +72,17 @@ public class ClassExercise {
         Fraction d = new Fraction(24, 16);
         d = d.reduce();
         System.out.println(d.num + " / " + d.den);
+        
+        // New methods
+        Fraction f = new Fraction(-4,5);
+        System.out.println(f.num + " / " + f.den);
+        System.out.println(Fraction.isPositive(f));
+        Fraction k = Fraction.abs(f);
+        System.out.println(k.num + " / " + k.den);
+        System.out.println(Fraction.isPositive(k));
+        Fraction t = Fraction.times(k, f);
+        System.out.println(t.num + " / " + t.den);
+        System.out.println(Fraction.isPositive(t));
     }
     
 }
